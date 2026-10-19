@@ -36,19 +36,6 @@ python3 net_speed_meter.py
  
 Click the indicator to see the active interface and how much you've downloaded and uploaded since the script started. Choose **Quit Net Speed Meter** to exit.
  
-## Run on login
- 
-Create `~/.config/autostart/net-speed-meter.desktop`:
- 
-```ini
-[Desktop Entry]
-Type=Application
-Name=Net Speed Meter
-Exec=python3 /full/path/to/net_speed_meter.py
-X-GNOME-Autostart-enabled=true
-```
- 
-Replace `/full/path/to/net_speed_meter.py` with the real path to the script.
  
  ## Run automatically on start
 
@@ -64,6 +51,7 @@ Exec=python3 $HOME/network-speed-meter/net_speed_meter.py
 X-GNOME-Autostart-enabled=true
 EOF
 ```
+Replace `$HOME/network-speed-meter/net_speed_meter.py` with the real path to the script.
 
 ## Configuration
  
