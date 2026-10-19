@@ -18,6 +18,7 @@ A lightweight network speed indicator for the Linux top bar. It shows your live 
 - Python 3
 - GTK 3 with AppIndicator support
 - `psutil`
+  
 Install the dependencies on Debian/Ubuntu-based systems:
  
 ```bash
@@ -37,9 +38,9 @@ python3 net_speed_meter.py
 Click the indicator to see the active interface and how much you've downloaded and uploaded since the script started. Choose **Quit Net Speed Meter** to exit.
  
  
- ## Run automatically on start
+## Run automatically on start
 
-This assumes the script is at `~/network-speed-meter/net_speed_meter.py`. If it’s saved under a different name, change the `Exec= line` to match. You can check with ls `~/net_speed_meter.py`.
+Create an autostart entry (replace the path with wherever you cloned the repo):
 
 ```bash
 mkdir -p ~/.config/autostart
@@ -47,11 +48,12 @@ cat > ~/.config/autostart/net-speed-meter.desktop << EOF
 [Desktop Entry]
 Type=Application
 Name=Net Speed Meter
-Exec=python3 $HOME/network-speed-meter/net_speed_meter.py
+Exec=python3 /full/path/to/net_speed_meter.py
 X-GNOME-Autostart-enabled=true
 EOF
 ```
-Replace `$HOME/network-speed-meter/net_speed_meter.py` with the real path to the script.
+
+Log out and back in to test it. Use an absolute path: `~` and `$HOME` can be wrong depending on where you cloned.
 
 ## Configuration
  
